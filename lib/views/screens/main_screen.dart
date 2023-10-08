@@ -23,8 +23,8 @@ class _MainScreenState extends State<MainScreen> {
         controller: _pageController,
         onPageChanged: onPageChanged,
         children: <Widget>[
-          Chats(),
-          Friends(),
+          // Chats(),
+          // Friends(),
           Home(),
           Notifications(),
           Profile(),
@@ -43,26 +43,36 @@ class _MainScreenState extends State<MainScreen> {
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.message,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.group,
-              ),
-              label: '',
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(
+            //     Icons.message,
+            //   ),
+            //   label: '',
+            // ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(
+            //     Icons.group,
+            //   ),
+            //   label: '',
+            // ),
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
               ),
               label: '',
             ),
+            // BottomNavigationBarItem(
+            //   icon: IconBadge(icon: Icons.notifications),
+            //   label: '',
+            // ),
             BottomNavigationBarItem(
-              icon: IconBadge(icon: Icons.notifications),
+              icon: Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Icon(Icons.circle, size: 30.0),  // ○のアイコン
+                  Icon(Icons.add, size: 20.0, color: Colors.white),     // +のアイコン
+                ],
+              ),
               label: '',
             ),
             BottomNavigationBarItem(
